@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="name">Tác giả:</label>
-                <select name ="book_category_id" id = "" class="form-control">
+                <select name ="book_author_id" id = "" class="form-control">
                     <option value="">--Chọn tác giả--</option>
                     @if(isset($authors))
                         @foreach($authors as $author)
@@ -65,12 +65,9 @@
 
             </div>
             <div class="form-group">
-
                     <button type="submit" class="btn btn-success">Lưu thông tin</button>
-
             </div>
         </div>
-
+    </div>
 </form>
-
 

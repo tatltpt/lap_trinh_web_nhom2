@@ -18,10 +18,21 @@
                 </div>
                 <div class="form-group">
                     <select name="cate" id="" class="form-control">
-                        <option value="" >Danh mục</option>
+                        <option value="" >Thể loại</option>
                         @if(isset($categories))
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}" {{ \Request::get('cate') == $category->id ? "selected='selected'" : ""}}>{{$category->c_name}}</option>
+                            @endforeach
+                        @endif
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <select name="author" id="" class="form-control">
+                        <option value="" >Tác giả</option>
+                        @if(isset($authors))
+                            @foreach($authors as $author)
+                                <option value="{{$author->id}}" {{ \Request::get('author') == $author->id ? "selected='selected'" : ""}}>{{$author->name}}</option>
                             @endforeach
                         @endif
                     </select>
@@ -48,13 +59,6 @@
             <tbody>
             @if ( isset($books))
                 @foreach($books as $book)
-                    <?php
-                    $age = 0;
-                    if($book->book_total_rating)
-                    {
-                        $age = round($book->book_total_number / $book->book_total_rating,2);
-                    }
-                    ?>
                     <tr>
                         <td>{{$book->id}}</td>
                         <td style="width: 368px">
