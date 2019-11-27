@@ -40,4 +40,8 @@ Route::group(['prefix' => 'book'], function () {
     Route::post('/update/{id}', 'AdminBookController@update');
     Route::get('/{action}/{id}', 'AdminBookController@action')->name('admin.get.action.book');
 });
+    Route::group(['prefix' => 'user'], function () {
+        Route::get('/', 'AdminUserController@index')->name('admin.get.list.user');
+
+    });
 });

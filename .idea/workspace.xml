@@ -104,19 +104,20 @@
       <path value="$PROJECT_DIR$/vendor/nwidart/laravel-modules" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1THW3Eg3mRvsL6r8zJxJfStazDG" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Resources/views/author" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Resources\views\author" />
-      <recent name="C:\xampp\htdocs\ltw\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\ltw\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Resources\views\author" />
       <recent name="C:\xampp\htdocs\ltw\app\Models" />
       <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Resources\views\book" />
     </key>
@@ -156,6 +157,16 @@
       <workItem from="1573517338679" duration="1101000" />
       <workItem from="1573558115341" duration="912000" />
       <workItem from="1573638484234" duration="17348000" />
+      <workItem from="1573805380097" duration="4869000" />
+      <workItem from="1574009423751" duration="945000" />
+      <workItem from="1574064239794" duration="4947000" />
+      <workItem from="1574181113488" duration="2061000" />
+      <workItem from="1574318287731" duration="22000" />
+      <workItem from="1574578428386" duration="605000" />
+      <workItem from="1574581231625" duration="1965000" />
+      <workItem from="1574678084807" duration="12227000" />
+      <workItem from="1574741111818" duration="2617000" />
+      <workItem from="1574782248535" duration="4553000" />
     </task>
     <servers />
   </component>

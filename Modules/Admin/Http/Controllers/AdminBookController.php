@@ -3,6 +3,7 @@
 namespace Modules\Admin\Http\Controllers;
 
 use App\Http\Requests\RequestBook;
+use App\Models\Author;
 use App\Models\Category;
 use App\Models\Book;
 use Illuminate\Http\Request;
@@ -14,16 +15,17 @@ class AdminBookController extends Controller
 
     public function index(Request $request)
     {
-        $books = book::with('category:id,c_name');
+        $books = Book::with('category:id,c_name','author:id,name');
         if($request->name) $books->where('book_name','like','%'.$request->name.'%');
         if($request->cate) $books->where('book_category_id',$request->cate);
-
+        if($request->author) $books->where('book_author_id',$request->author);
         $books = $books->orderByDesc('id')->paginate(20);
         $categories = $this->getCategories();
-
+        $authors = $this->getAuthors();
         $viewData = [
             'books'=>$books,
-            'categories'=>$categories
+            'categories'=>$categories,
+            'authors'=>$authors
         ];
         return view('admin::book.index',$viewData);
     }
@@ -32,7 +34,8 @@ class AdminBookController extends Controller
     public function create()
     {
         $categories = $this->getCategories();
-        return view('admin::book.create',compact('categories'));
+        $authors = $this->getAuthors();
+        return view('admin::book.create',compact('categories','authors'));
     }
 
 
@@ -43,9 +46,10 @@ class AdminBookController extends Controller
     }
     public function edit($id)
     {
-        $book = book::find($id);
+        $book = Book::find($id);
         $categories = $this->getCategories();
-        return view('admin::book.update',compact('book','categories'));
+        $authors = $this->getAuthors();
+        return view('admin::book.update',compact('book','categories','authors'));
     }
     public function update(RequestBook $requestBook,$id)
     {
@@ -56,16 +60,28 @@ class AdminBookController extends Controller
     {
         return Category::all();
     }
+    public function getAuthors()
+    {
+        return Author::all();
+    }
     public function insertOrUpdate($requestBook, $id = '')
     {
         $book = new Book();
-        if ($id) $book = book::find($id);
+        if ($id) $book = Book::find($id);
         $book->book_name = $requestBook->book_name;
         $book->book_slug = str_slug($requestBook->book_name);
         $book->book_category_id = $requestBook->book_category_id;
+        $book->book_description = $requestBook->book_description;
+        $book->book_content = $requestBook->book_content;
         $book->book_price = $requestBook->book_price;
         $book->book_author_id = $requestBook->book_author_id;
         $book->book_number = $requestBook->book_number;
+        if ($requestBook->hasFile('avatar')){
+            $file = upload_image('avatar');
+            if(isset($file['name'])){
+                $book->book_avatar = $file['name'];
+            }
+        }
         $book ->save();
 
     }
@@ -73,7 +89,7 @@ class AdminBookController extends Controller
     {
         if($action)
         {
-            $book = book::find($id);
+            $book = Book::find($id);
             switch($action)
             {
                 case 'delete':

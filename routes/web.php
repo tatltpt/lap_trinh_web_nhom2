@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('the-loai/{slug}-{id}','CategoryController@getListBook')->name('get.list.book');
+Route::get('sach/{slug}-{id}','BookDetailController@bookDetail')->name('get.detail.book');
