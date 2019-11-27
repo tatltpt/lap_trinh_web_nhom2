@@ -1,8 +1,7 @@
 <form action="" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="row">
-
-        <div class="col-sm-4">
+        <div class="col-sm-8">
             <div class="form-group">
                 <label for="book_name">Tên sách:</label>
                 <input type="text" class="form-control"  placeholder="Tên sách" value="{{old('book_name',isset($book->book_name) ? $book->book_name : '') }}" name="book_name">
@@ -12,22 +11,7 @@
                             </span>
                 @endif
             </div>
-            <div class="form-group">
-                <label for="name">Loại sách:</label>
-                <select name ="book_category_id" id = "" class="form-control">
-                    <option value="">--Chọn loại sách--</option>
-                    @if(isset($categories))
-                        @foreach($categories as $category)
-                            <option value="{{ $category->id }}" {{old('book_category_id',isset($book->book_category_id) ? $book->book_category_id : '') == $category->id ? "selected='selected'":""}}>{{ $category->c_name }}</option>
-                        @endforeach
-                    @endif
-                </select>
-                @if($errors->has('book_category_id'))
-                    <span class="error-text">
-                            {{$errors->first('book_category_id')}}
-                            </span>
-                @endif
-            </div>
+
             <div class="form-group">
                 <label for="name">Tác giả:</label>
                 <select name ="book_author_id" id = "" class="form-control">
@@ -44,6 +28,41 @@
                             </span>
                 @endif
             </div>
+
+            <div class="form-group">
+                <label for="name">Mô tả</label>
+                <textarea name="book_description" class="form-control" id="" cols="30" rows="3" placeholder="Mô tả ngắn sách">{{old('book_description',isset($book->book_description) ? $book->book_description : '')}}</textarea>
+                @if($errors->has('book_description'))
+                    <span class="error-text">
+                            {{$errors->first('book_description')}}
+                            </span>
+                @endif
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="name">Loại sách:</label>
+                <select name ="book_category_id" id = "" class="form-control">
+                    <option value="">--Chọn loại sách--</option>
+                    @if(isset($categories))
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" {{old('book_category_id',isset($book->book_category_id) ? $book->book_category_id : '') == $category->id ? "selected='selected'":""}}>{{ $category->c_name }}</option>
+                        @endforeach
+                    @endif
+                </select>
+                @if($errors->has('book_category_id'))
+                    <span class="error-text">
+                            {{$errors->first('book_category_id')}}
+                            </span>
+                @endif
+            </div>
+
+            <div class="form-group">
+                <label for="name">Số lượng sách:</label>
+                <input type="number" placeholder="18" class="form-control" name="book_number" value="{{old('book_number',isset($book->book_number) ? $book->book_number : '0')}}">
+            </div>
+
             <div class="form-group">
                 <label for="name">Giá sách:</label>
                 <input type="number" placeholder="Giá sách" class="form-control" value="{{old('book_price',isset($book->book_price) ? $book->book_price : '')}}" name="book_price">
@@ -53,21 +72,21 @@
                             </span>
                 @endif
             </div>
+
             <div class="form-group">
-                <label for="name">Số lượng sách:</label>
-                <input type="number" placeholder="18" class="form-control" name="book_number" value="{{old('book_number',isset($book->book_number) ? $book->book_number : '0')}}">
+                <label for="name">Avatar:</label>
+                <input type="file" id="input_img" name="avatar" class="form-control">
             </div>
 
             <div class="form-group">
                 <div class="checkbox">
                     <label><input type="checkbox" name="hot"> Nổi bật</label>
                 </div>
-
-            </div>
-            <div class="form-group">
-                    <button type="submit" class="btn btn-success">Lưu thông tin</button>
             </div>
         </div>
     </div>
+
+        <button type="submit" class="btn btn-success">Lưu thông tin</button>
 </form>
+
 

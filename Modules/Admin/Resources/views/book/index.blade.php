@@ -49,6 +49,7 @@
             <tr>
                 <th>STT</th>
                 <th>Tên sách</th>
+                <th>Hình ảnh</th>
                 <th>Loại sách</th>
                 <th>Tác giả</th>
                 <th>Trạng thái</th>
@@ -61,12 +62,15 @@
                 @foreach($books as $book)
                     <tr>
                         <td>{{$book->id}}</td>
-                        <td style="width: 368px">
+                        <td style="width: 200px">
                             {{$book->book_name}}
                             <ul style="padding-left: 16px;">
                                 <li><span><i class="fas fa-dollar-sign"></i></span><span> {{number_format($book->book_price,0,',','.')}}đ</span></li>
                                 <li><span>Số lượng :</span><sapn>{{$book->book_number}}</sapn></li>
                             </ul>
+                        </td>
+                        <td>
+                            <img src="{{ pare_url_file($book->book_avatar) }}" alt="" class="img img-responsive" style="width: 83px;height: 86px;" >
                         </td>
                         <td>{{isset($book->category->c_name) ? $book->category->c_name : '[N\A]'}}</td>
                         <td>{{isset($book->author->name) ? $book->author->name : '[N\A]'}}</td>
