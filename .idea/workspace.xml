@@ -105,18 +105,19 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
     </include_path>
   </component>
   <component name="ProjectId" id="1THW3Eg3mRvsL6r8zJxJfStazDG" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Admin/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Http\Controllers" />
       <recent name="C:\xampp\htdocs\ltw\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Http\Controllers" />
       <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Resources\views\author" />
       <recent name="C:\xampp\htdocs\ltw\app\Models" />
       <recent name="C:\xampp\htdocs\ltw\Modules\Admin\Resources\views\book" />
@@ -166,7 +167,14 @@
       <workItem from="1574581231625" duration="1965000" />
       <workItem from="1574678084807" duration="12227000" />
       <workItem from="1574741111818" duration="2617000" />
-      <workItem from="1574782248535" duration="4553000" />
+      <workItem from="1574782248535" duration="5527000" />
+      <workItem from="1574927150068" duration="2399000" />
+      <workItem from="1574968923129" duration="1349000" />
+      <workItem from="1575016355472" duration="4376000" />
+      <workItem from="1575045230017" duration="600000" />
+      <workItem from="1575218117349" duration="1000" />
+      <workItem from="1575218901872" duration="3560000" />
+      <workItem from="1575273668425" duration="24548000" />
     </task>
     <servers />
   </component>

@@ -43,5 +43,12 @@ Route::group(['prefix' => 'book'], function () {
     Route::group(['prefix' => 'user'], function () {
         Route::get('/', 'AdminUserController@index')->name('admin.get.list.user');
 
+
     });
+    Route::group(['prefix' => 'transaction'], function () {
+        Route::get('/', 'AdminTransactionController@index')->name('admin.get.list.transaction');
+        Route::get('/view/{id}', 'AdminTransactionController@viewBillDetail')->name('admin.get.view.billdetail');
+        Route::get('/{action}/{id}', 'AdminTransactionController@action')->name('admin.get.action.transaction');
+    });
+
 });
