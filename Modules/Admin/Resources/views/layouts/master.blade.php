@@ -45,11 +45,11 @@
             <ul class="nav nav-sidebar">
                 <li class="{{ \Request::route()->getName() == 'admin.home' ? 'active' : ''}}">
                     <a href="">Trang Tổng Quan </a></li>
-                <li class="{{ \Request::route()->getName() == 'admin.get.list.category' ? 'active' : ''}}"><a href="{{route('admin.get.list.category')}}">Category</a></li>
-                <li class="{{ \Request::route()->getName() == 'admin.get.list.author' ? 'active' : ''}}"><a href="{{route('admin.get.list.author')}}">Author</a></li>
-                <li class="{{ \Request::route()->getName() == 'admin.get.list.book' ? 'active' : ''}}"><a href="{{route('admin.get.list.book')}}">Book</a></li>
-{{--                <li class="{{ \Request::route()->getName() == 'admin.get.list.transaction' ? 'active' : ''}}"><a href="{{route('admin.get.list.transaction')}}">Bills</a></li>--}}
-{{--                <li class="{{ \Request::route()->getName() == 'admin.get.list.user' ? 'active' : ''}}"><a href="{{route('admin.get.list.user')}}">Users</a></li>--}}
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.category' ? 'active' : ''}}"><a href="{{route('admin.get.list.category')}}">Thể loại</a></li>
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.author' ? 'active' : ''}}"><a href="{{route('admin.get.list.author')}}">Tác giả</a></li>
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.book' ? 'active' : ''}}"><a href="{{route('admin.get.list.book')}}">Sách</a></li>
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.transaction' ? 'active' : ''}}"><a href="{{route('admin.get.list.transaction')}}">Hóa đơn</a></li>
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.user' ? 'active' : ''}}"><a href="{{route('admin.get.list.user')}}">Thành viên</a></li>
             </ul>
 
         </div>
