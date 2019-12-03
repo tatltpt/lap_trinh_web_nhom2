@@ -37,6 +37,16 @@ class CategoryController extends FrontendController
             ];
             return view('book.index', $viewData);
         }
+        if($request->k){
+            $books = Book::where([
+                'book_active' => Book::STATUS_PUBLIC
+            ])->where('book_name','like','%'.$request->k.'%');
+            $books = $books->paginate(6);
+            $viewData = [
+                'books' => $books
+            ];
+            return view('book.index', $viewData);
+        }
         return redirect('/');
     }
 }

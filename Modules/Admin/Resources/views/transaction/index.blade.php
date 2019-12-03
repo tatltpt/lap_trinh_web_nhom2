@@ -34,7 +34,7 @@
                         <a href="{{route('admin.get.action.transaction',['active',$transaction->id])}}" class="label {{$transaction->getStatus($transaction->tr_status)['class']}}">{{$transaction->getStatus($transaction->tr_status)['name']}}</a>
                     </td>
                     <td>
-                        <a style="padding: 5px 10px;border: 1px solid #999;font-size: 12px" class="btn_customer_action" href=""><i class="far fa-trash-alt" style="font-size: 11px"></i> Xóa</a>
+                        <a style="padding: 5px 10px;border: 1px solid #999;font-size: 12px" class="btn_customer_action" href="{{route('admin.get.action.transaction',['delete',$transaction->id])}}"><i class="far fa-trash-alt" style="font-size: 11px"></i> Xóa</a>
                         <a style="padding: 5px 10px;border: 1px solid #999;font-size: 12px" data-id="{{$transaction->id}}" class="btn_customer_action js_order_item" href="{{route('admin.get.view.billdetail',$transaction->id)}}"><i class="fas fa-eye" style="font-size: 11px"></i></a>
                     </td>
                 </tr>

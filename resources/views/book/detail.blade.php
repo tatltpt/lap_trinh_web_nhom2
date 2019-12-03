@@ -9,11 +9,12 @@
                         <div class="col-md-8">
                             <a href="">
                                 <h1 class="ebook_title text-primary">{{$bookDetail->book_name}}</h1>
-                            </a>
-                            <h5 class="">Tác giả : {{$bookDetail->author->name}}</h5>
-                            <h5 class="">Thể Loại : <a href="">{{$bookDetail->category->c_name}}</a></h5>
-{{--                            <h5 class="">Lượt xem : 7167</h5>--}}
+                            </a><br>
+                            <h5 class="">Tác giả : {{$bookDetail->author->name}}</h5><br>
+                            <h5 class="">Thể Loại : <a href="">{{$bookDetail->category->c_name}}</a></h5><br>
+                            <br>
 
+                            <h4 class="pull-left"><a href="{{route('add.borrowing.cart',$bookDetail->id)}}" class="btn-primary btn">Mượn sách</a></h4>
                         </div>
                     </div>
                     <hr>

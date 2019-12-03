@@ -4,7 +4,7 @@
             <!-- logo start -->
             <div class="col-md-3 col-sm-12 text-center nopadding-right">
                 <div class="top-logo">
-                    <a href="/" ><img src="{{asset('img/logo.png')}}" alt="" /></a>
+                    <a href="/" ><img src="{{asset('img/logo1.png')}}" alt="" /></a>
                 </div>
             </div>
             <!-- logo end -->
@@ -24,9 +24,8 @@
                                     @endif
                                 </ul>
                             </li>
-                            <li class="expand"><a href="" title="Tin tức">Tin tức</a></li>
-                            <li class="expand"><a href="">Giới thiệu</a></li>
-                            <li class="expand"><a href="">Liên hệ</a></li>
+                            <li class="expand"><a href="{{route('get.about_us')}}">Giới thiệu</a></li>
+                            <li class="expand"><a href="{{route('get.contact')}}">Liên hệ</a></li>
 
                         </ul>
                     </nav>
@@ -55,9 +54,9 @@
                             <div class="search-icon fa fa-search"></div>
                             <div class="product-search restrain">
                                 <div class="container nopadding-right">
-                                    <form action="" id="searchform" method="get">
+                                    <form action="{{route('get.book.list')}}" id="searchform" method="get">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="k" maxlength="128" placeholder="Search product...">
+                                            <input type="text" class="form-control" name="k" maxlength="128" placeholder="Tìm kiếm sách...">
                                             <span class="input-group-btn">
 														<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
 													</span>
@@ -74,8 +73,7 @@
                             <ul class="restrain language" style="width: 200px">
                                 @if(Auth::check())
                                     <li><a href="">Quản lý</a></li>
-                                    <li><a href="">Sách yêu thích</a></li>
-                                    <li><a href="">Giỏ hàng</a></li>
+                                    <li><a href="{{route('get.list.borrowing.cart')}}">Giỏ hàng</a></li>
                                     <li><a href="{{route('get.logout.user')}}">Thoát</a></li>
                                 @else
                                     <li><a href="{{route('get.login')}}">Đăng nhập</a></li>

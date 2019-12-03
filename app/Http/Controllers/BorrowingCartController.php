@@ -11,7 +11,7 @@ use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Http\Request;
 
-class BorrowingCartController extends Controller
+class BorrowingCartController extends FrontendController
 {
     //them gio hang
     public function addBook(Request $request,$id)
@@ -32,7 +32,7 @@ class BorrowingCartController extends Controller
                     'author' => $book->author->name
                 ],
         ]);
-        return redirect()->back()->with('success','Thêm vào giỏ hàng thành công');
+        return redirect()->back()->with('success','Thêm vào giỏ sách thành công');
     }
 
     public function deleteBookItem($key)
@@ -79,6 +79,6 @@ class BorrowingCartController extends Controller
             }
         }
         \Cart::destroy();
-        return redirect('/')->with('success','Thanh toán thành công');
+        return redirect('/')->with('success','Thành công!Chờ Admin xử lí');
     }
 }

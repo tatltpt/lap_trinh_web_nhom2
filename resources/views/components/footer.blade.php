@@ -23,8 +23,6 @@
                                 <li><a href="">Giới thiệu</a></li>
                                 <li><a href="">Tuyển dụng</a></li>
                                 <li><a href="">Chính sách bảo mật</a></li>
-{{--                                <li><a href="{{route('get.about_us')}}">Chính sách giải quyết khiếu nại</a></li>--}}
-{{--                                <li><a href="{{route('get.about_us')}}">Điều khoản sử dụng</a></li>--}}
                             </ul>
                         </div>
                     </div>
@@ -38,9 +36,7 @@
                             <ul>
                                 <li><a href="">Câu hỏi thường gặp</a></li>
                                 <li><a href="">Gửi yêu cầu hỗ trợ</a></li>
-                                <li><a href="">Hướng dẫn đặt hàng</a></li>
-                                <li><a href="">Chính sách đổi trả</a></li>
-                                <li><a href="">Phương thức vận chuyển</a></li>
+                                <li><a href="">Hướng dẫn mượn sách</a></li>
                             </ul>
                         </div>
                     </div>

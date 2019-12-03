@@ -2,8 +2,8 @@
     <!-- slider -->
     <div class="bend niceties preview-2">
         <div id="ensign-nivoslider" class="slides">
-            <img src="{{asset('img/slider1-1.jpg')}}" alt="" title="#slider-direction-1"  />
-            <img src="{{asset('img/slider1-2.jpg')}}" alt="" title="#slider-direction-2"  />
+            <img src="{{asset('img/slider1-3.jpg')}}" alt="" title="#slider-direction-1"  />
+            <img src="{{asset('img/slider1-4.jpg')}}" alt="" title="#slider-direction-2"  />
         </div>
         <!-- direction 1 -->
         <div id="slider-direction-1" class="t-cn slider-direction">

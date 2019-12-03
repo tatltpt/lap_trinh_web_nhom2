@@ -27,15 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Quản lý thư viện</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Thoát</a></li>
+                <li><a href="{{route('admin.logout')}}">Thoát</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
         </div>
     </div>
 </nav>
@@ -50,6 +47,7 @@
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.book' ? 'active' : ''}}"><a href="{{route('admin.get.list.book')}}">Sách</a></li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.transaction' ? 'active' : ''}}"><a href="{{route('admin.get.list.transaction')}}">Hóa đơn</a></li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.user' ? 'active' : ''}}"><a href="{{route('admin.get.list.user')}}">Thành viên</a></li>
+                <li class="{{ \Request::route()->getName() == 'admin.get.list.contact' ? 'active' : ''}}"><a href="{{route('admin.get.list.contact')}}">Liên hệ</a></li>
             </ul>
 
         </div>

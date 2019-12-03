@@ -16,7 +16,9 @@
                                 <a href="/">Trang chủ</a>
                                 <span><i class="fa fa-angle-right"></i></span>
                             </li>
+                            @if (isset($cateBook->c_name))
                             <li class="category3"><span>{{$cateBook->c_name}}</span></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -30,7 +32,9 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="panel panel-primary">
+                        @if (isset($cateBook->c_name))
                         <div class="panel-heading">{{$cateBook->c_name}}</div>
+                        @endif
                         <div class="panel-body">
                             @if(isset($books))
                                 @foreach($books as $book)

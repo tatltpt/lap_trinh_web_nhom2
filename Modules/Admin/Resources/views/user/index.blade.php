@@ -18,7 +18,6 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Hình ảnh</th>
-                <th>Thao tác</th>
             </tr>
             </thead>
             <tbody>
@@ -33,10 +32,6 @@
                             <img src="{{ pare_url_file($user->_avatar) }}" alt="" class="img img-responsive" style="width: 80px;height: 80px;" >
                         </td>
 
-                        <td>
-{{--                            <a style="padding: 5px 10px;border: 1px solid #999;font-size: 12px" href="{{route('admin.get.edit.user',$user->id)}}"><i class="fas fa-pencil-alt" style="font-size: 11px"></i> Cập nhật</a>--}}
-{{--                            <a style="padding: 5px 10px;border: 1px solid #999;font-size: 12px" href="{{route('admin.get.action.user',['delete',$user->id])}}"><i class="far fa-trash-alt" style="font-size: 11px"></i> Xóa</a>--}}
-                        </td>
                     </tr>
                 @endforeach
             @endif

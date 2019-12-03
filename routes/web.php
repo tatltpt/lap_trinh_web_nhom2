@@ -23,7 +23,9 @@ Route::group(['namespace'=>'Auth'],function(){
 });
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('the-loai/{slug}-{id}','CategoryController@getListBook')->name('get.list.book');
+Route::get('sach','CategoryController@getListBook')->name('get.book.list');
 Route::get('sach/{slug}-{id}','BookDetailController@bookDetail')->name('get.detail.book');
+
 Route::prefix('borrowing')->group(function(){
     Route::get('/add/{id}','BorrowingCartController@addBook')->name('add.borrowing.cart');
     Route::get('/delete/{id}','BorrowingCartController@deleteBookItem')->name('delete.borrowing.cart');
@@ -34,3 +36,6 @@ Route::group(['prefix'=>'gio-hang','middleware'=>'CheckLoginUser'],function(){
     Route::post('/xac-nhan-muon-sach','BorrowingCartController@saveInfoBorrowingCart');
 
 });
+Route::get('lien-he','ContactController@getContact')->name('get.contact');
+Route::post('lien-he','ContactController@saveContact');
+Route::get('ve-chung-toi','PageStaticController@aboutUs')->name('get.about_us');

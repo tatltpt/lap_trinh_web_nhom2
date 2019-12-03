@@ -38,9 +38,6 @@
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-links">
-                                                            <div class="add-to-wishlist">
-                                                                <a href="#" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                                            </div>
                                                             <div class="compare-button">
                                                                 <a href="{{route('add.borrowing.cart',$hot->id)}}" title="Add to Cart"><i class="icon-bag"></i></a>
                                                             </div>

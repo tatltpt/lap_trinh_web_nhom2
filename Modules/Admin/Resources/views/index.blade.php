@@ -1,9 +1,8 @@
 @extends('admin::layouts.master')
 
 @section('content')
-    <h1>Hello World</h1>
-
-    <p>
-        This view is loaded from module: {!! config('admin.name') !!}
-    </p>
-@endsection
+    <h1 class="page-header">Tổng quan</h1>
+    <div class="contact-form">
+        <h2>Xin chào Admin</h2>
+    </div>
+@stop
