@@ -62,7 +62,7 @@
                 @foreach($books as $book)
                     <tr>
                         <td>{{$book->id}}</td>
-                        <td style="width: 200px">
+                        <td style="width: 196px">
                             {{$book->book_name}}
                             <ul style="padding-left: 16px;">
                                 <li><span><i class="fas fa-dollar-sign"></i></span><span> {{number_format($book->book_price,0,',','.')}}đ</span></li>
@@ -73,7 +73,7 @@
                             <img src="{{ pare_url_file($book->book_avatar) }}" alt="" class="img img-responsive" style="width: 83px;height: 86px;" >
                         </td>
                         <td>{{isset($book->category->c_name) ? $book->category->c_name : '[N\A]'}}</td>
-                        <td>{{isset($book->author->name) ? $book->author->name : '[N\A]'}}</td>
+                        <td style="width: 150px">{{isset($book->author->name) ? $book->author->name : '[N\A]'}}</td>
                         <td>
                             <a href="{{route('admin.get.action.book',['active',$book->id])}}" class="label {{$book->getStatus($book->book_active)['class']}}">{{$book->getStatus($book->book_active)['name']}}</a>
                         </td>
@@ -90,5 +90,6 @@
             @endif
             </tbody>
         </table>
+        {!! $books->links() !!}
     </div>
 @stop

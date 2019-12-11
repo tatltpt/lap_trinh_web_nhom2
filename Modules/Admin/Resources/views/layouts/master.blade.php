@@ -40,8 +40,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="{{ \Request::route()->getName() == 'admin.home' ? 'active' : ''}}">
-                    <a href="">Trang Tổng Quan </a></li>
+
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.category' ? 'active' : ''}}"><a href="{{route('admin.get.list.category')}}">Thể loại</a></li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.author' ? 'active' : ''}}"><a href="{{route('admin.get.list.author')}}">Tác giả</a></li>
                 <li class="{{ \Request::route()->getName() == 'admin.get.list.book' ? 'active' : ''}}"><a href="{{route('admin.get.list.book')}}">Sách</a></li>

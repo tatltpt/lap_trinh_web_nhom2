@@ -2,7 +2,7 @@
     @csrf
     <div class="form-group">
         <label for="name">Tên tác giả</label>
-        <input type="text" class="form-control"  placeholder="Tên tác giả" value="{{old('name',isset($author->name) ? $author->name : '') }}" name="name">
+        <input type="text" class="form-control"  placeholder="Tên tác giả" value="{{old('name',isset($author->name) ? $author->name:'')}}" name="name">
         @if($errors->has('name'))
             <span class="error-text">
                             {{$errors->first('name')}}

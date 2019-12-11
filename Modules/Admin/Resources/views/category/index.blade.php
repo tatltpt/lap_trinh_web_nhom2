@@ -3,18 +3,18 @@
     <div class="page-header">
         <ol class="breadcrumb">
             <li><a href="/">Trang chủ</a></li>
-            <li><a href="">Danh mục</a></li>
+            <li><a href="">Thể loại</a></li>
             <li class="active">Danh sách</li>
         </ol>
     </div>
 
     <div class="table-responsive">
-        <h2>Quản lý danh mục<a href="{{ route('admin.get.create.category')}}" class='pull-right'><i class="fa fa-plus-circle" aria-hidden="true"></i></a></h2>
+        <h2>Quản lý thể loại<a href="{{ route('admin.get.create.category')}}" class='pull-right'><i class="fa fa-plus-circle" aria-hidden="true"></i></a></h2>
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>STT</th>
-                <th>Tên danh mục</th>
+                <th>Tên thể loại</th>
                 <th>Trạng thái</th>
                 <th>Thao tác</th>
             </tr>

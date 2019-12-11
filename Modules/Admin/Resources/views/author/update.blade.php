@@ -9,7 +9,7 @@
     </div>
 
     <div class="">
-        @include("admin::category.form")
+        @include("admin::author.form")
     </div>
 
 

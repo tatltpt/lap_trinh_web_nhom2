@@ -3,6 +3,7 @@
 namespace Modules\Admin\Http\Controllers;
 
 use App\Models\BillDetail;
+use App\Models\Book;
 use App\Models\Order;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -31,13 +32,13 @@ class AdminTransactionController extends Controller
             return \response()->json($html);
         }
     }
-    public function action(Request $request, $action, $id)
+    public function action($action, $id)
     {
         if ($action) {
             $transaction = Transaction::find($id);
             switch ($action) {
                 case 'delete':
-                    $transaction->delete();
+                    $transaction->delete($id);
                     break;
                 case 'active':
                     $transaction->tr_status = $transaction->tr_status ? 0 : 1;
@@ -45,7 +46,6 @@ class AdminTransactionController extends Controller
                     break;
             }
             $transaction->save();
-
         }
         return redirect()->back();
     }

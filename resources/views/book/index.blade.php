@@ -40,12 +40,12 @@
                                 @foreach($books as $book)
                             <div class="col-xs-6 col-md-3 col-sm-3 ebook">
                                 <a href="{{route('get.detail.book',[$book->book_slug,$book->id])}}" class="thumbnail"> <img src="{{asset(pare_url_file($book->book_avatar))}}" alt=""> </a>
-                                <h5 class="tieude text-center"><a href="{{route('get.detail.book',[$book->book_slug,$book->id])}}"></a>{{$book->book_name}}</h5>
+                                <h5 class="tieude text-center"  style="height: 50px"><a href="{{route('get.detail.book',[$book->book_slug,$book->id])}}"></a>{{$book->book_name}}</h5>
                             </div>
                                 @endforeach
-                                {!! $books->links() !!}
                             @endif
                         </div>
+                            <div align="center">{!! $books->links() !!}</div>
                     </div>
                 </div>
                 <div class="col-md-3 sidebar">

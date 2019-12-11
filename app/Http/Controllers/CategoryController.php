@@ -24,7 +24,7 @@ class CategoryController extends FrontendController
             ]);
 
 
-            $books = $books->simplePaginate(6);
+            $books = $books->simplePaginate(8);
 
             $cateBook = Category::find($id);
 
@@ -41,7 +41,7 @@ class CategoryController extends FrontendController
             $books = Book::where([
                 'book_active' => Book::STATUS_PUBLIC
             ])->where('book_name','like','%'.$request->k.'%');
-            $books = $books->paginate(6);
+            $books = $books->paginate(16);
             $viewData = [
                 'books' => $books
             ];

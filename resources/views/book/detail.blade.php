@@ -1,5 +1,24 @@
 @extends('layouts.app')
 @section('content')
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-inner">
+                        <ul>
+                            <li class="home">
+                                <a href="/">Trang chủ</a>
+                                <span><i class="fa fa-angle-right"></i></span>
+                            </li>
+                            @if (isset($bookDetail->book_name))
+                                <li class="category3"><span>{{$bookDetail->book_name}}</span></li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="col-md-9">
             <div class="panel panel-primary">

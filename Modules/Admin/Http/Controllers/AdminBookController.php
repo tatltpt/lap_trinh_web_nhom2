@@ -19,7 +19,7 @@ class AdminBookController extends Controller
         if($request->name) $books->where('book_name','like','%'.$request->name.'%');
         if($request->cate) $books->where('book_category_id',$request->cate);
         if($request->author) $books->where('book_author_id',$request->author);
-        $books = $books->orderByDesc('id')->paginate(20);
+        $books = $books->orderByDesc('id')->paginate(10);
         $categories = $this->getCategories();
         $authors = $this->getAuthors();
         $viewData = [
@@ -85,7 +85,7 @@ class AdminBookController extends Controller
         $book ->save();
 
     }
-    public function action(Request $request,$action,$id)
+    public function action($action,$id)
     {
         if($action)
         {

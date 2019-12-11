@@ -1,8 +1,8 @@
 <form action="" method="POST" >
     @csrf
     <div class="form-group">
-        <label for="name">Tên danh mục</label>
-        <input type="text" class="form-control"  placeholder="Tên danh mục" value="{{old('name',isset($category->c_name) ? $category->c_name : '') }}" name="name">
+        <label for="name">Tên thể loại</label>
+        <input type="text" class="form-control"  placeholder="Tên thể loại" value="{{old('name',isset($category->c_name) ? $category->c_name : '') }}" name="name">
         @if($errors->has('name'))
             <span class="error-text">
                             {{$errors->first('name')}}
