@@ -16,12 +16,12 @@ Chức năng:
                       
                       
 Công nghệ sử dụng:
-                        "php": "^7.2",
-                        "bumbummen99/shoppingcart": "^2.8",
-                        "fideloper/proxy": "^4.0",
-                        "laravel/framework": "^6.2",
-                        "laravel/tinker": "^1.0",
-                        "laravel/ui": "^1.1",
+                        "php": "^7.2"
+                        "bumbummen99/shoppingcart": "^2.8"
+                        "fideloper/proxy": "^4.0"
+                        "laravel/framework": "^6.2"
+                        "laravel/tinker": "^1.0"
+                        "laravel/ui": "^1.1"
                         "nwidart/laravel-modules": "^6.1"
                         "bootstrap" "4"
                         "jQuery Ajax" 
